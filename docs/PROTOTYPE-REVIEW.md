@@ -1,19 +1,29 @@
-# OptiMode — prototype engineering review
+# OptiMode — Engineering review
 
-## Verified scope
-The repository README describes a **notification/attention policy** prototype, with Focus, Balanced and Open modes. It explicitly does not manage real operating-system notifications.
+## Canonical concept
+Optional Community Credits (ON/OFF); proposed allocation **70% user / 30% platform**.
 
-## Product-definition decision required
-Future-by-Fie has also described **OptiMode** as an optional creator/community-credit mechanism with a 70% creator / 30% platform split. That is a materially different product. Do not silently combine the two or imply they are the same implementation. Decide whether to rename, split, or replace this repository before adding feature code.
+## Runnable demo
+- `index.html` and `src/main.mjs`: synthetic opt-in UI.
+- `src/credits.mjs`: pure calculation functions.
+- `test/credits.test.mjs`: Node built-in test runner.
+- `npm test` and `npm run build`: local verification commands.
 
-## Quality criteria for the existing attention prototype
-- Focus mode must always preserve priority-contact delivery.
-- Balanced mode applies category policy to non-priority contacts.
-- Open mode bypasses category suppression for synthetic demo items.
-- Muted, scheduled and immediate classifications must be deterministic.
-- Invalid persisted settings must be handled safely.
-- Reset must restore documented defaults.
-- Tests should cover each policy combination and invalid input.
+## Invariants
+1. Default participation is OFF.
+2. Opting out generates zero credits.
+3. Integer allocation preserves the total with no fractional credit loss.
+4. Invalid inputs are rejected.
+5. All displayed values are fictional; no balance is persisted.
 
-## Limitations
-No OS integration, real notification interception, enforcement of quiet hours, or real attention metrics are claimed. CI is a starting point; passing results must be verified separately.
+## Open questions
+- What constitutes eligible activity and who validates it?
+- How are credits funded and what, if anything, are they redeemable for?
+- How are fraud, bots, collusion, moderation, reversals and disputes handled?
+- What regulatory, tax and consumer obligations apply to the eventual implementation?
+
+## Security and privacy
+No authentication, backend, payment rails or real personal data. A production system must calculate balances server-side and cannot trust client-side credit amounts.
+
+## Migration note
+The previous notification-manager files and documentation were an unrelated concept mistakenly placed in this repository. They are deliberately replaced rather than maintained as a competing OptiMode definition.
