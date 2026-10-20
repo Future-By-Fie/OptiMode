@@ -6,7 +6,7 @@ export function splitCredits(totalCredits) {
     throw new RangeError("Credits must be a non-negative safe integer.");
   }
   // Deterministic rounding: platform receives remainder, no fractional credits.
-  const userCredits = Math.floor(totalCredits * USER_SHARE_BPS / 10000);
+  const userCredits = Number((BigInt(totalCredits) * BigInt(USER_SHARE_BPS)) / 10000n);
   return { userCredits, platformCredits: totalCredits - userCredits };
 }
 
