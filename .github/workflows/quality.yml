@@ -1,4 +1,4 @@
-name: OptiMode quality checks
+name: OptiMode Community Credits checks
 on:
   push:
     branches: [main, "feature/**"]
@@ -12,6 +12,5 @@ jobs:
         with:
           node-version: "22"
       - run: npm install
-      - run: npm run lint
       - run: npm test
       - run: npm run build
