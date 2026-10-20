@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="OptiMode — optional community credits. A Future-by-Fie concept demo." />
+  <title>OptiMode — Community Credits</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="module" src="./src/main.mjs"></script>
+</head>
+<body>
+  <main class="wrap">
+    <header><div class="brand">Opti<span>Mode</span></div><span class="pill">Future-by-Fie · Concept prototype</span></header>
+    <section class="hero">
+      <p class="eyebrow">Community Credits · Opt in. Opt out.</p>
+      <h1>Your participation.<br /><em>Your choice.</em></h1>
+      <p>Explore a voluntary community reward layer for social platforms. When you opt in, eligible demo activity generates fictional credits shared between you and the platform.</p>
+      <div class="switchline"><label for="opt-in">Enable Community Credits</label><input type="checkbox" id="opt-in" /><strong id="mode">OFF</strong></div>
+    </section>
+    <section class="panel">
+      <div class="section-title"><h2>Simulate participation</h2><span>Demo only · no real earnings</span></div>
+      <label for="actions">Eligible community actions</label>
+      <input id="actions" type="range" min="0" max="20" step="1" value="5" />
+      <p class="count"><output id="actions-value">5</output> actions × 10 fictional credits</p>
+      <div class="cards">
+        <article><span>Total credits</span><strong id="total">0</strong></article>
+        <article><span>Your share · 70%</span><strong id="user">0</strong></article>
+        <article><span>Platform share · 30%</span><strong id="platform">0</strong></article>
+      </div>
+      <p id="explanation" role="status" aria-live="polite"></p>
+    </section>
+    <section class="details"><h2>Designed around choice</h2><p>Participation is OFF by default. No sign-in, tracking, wallet, payout, blockchain, advertising integration or backend is implemented. This interactive calculation demonstrates a product hypothesis, not a promise of income.</p></section>
+    <footer>Future-by-Fie · Independent innovation concept · Not a live financial service</footer>
+  </main>
+</body>
+</html>
