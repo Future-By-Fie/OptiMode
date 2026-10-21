@@ -46,3 +46,7 @@ The demo does not measure contribution value, prevent fraud, distribute money, p
 - Review applicable consumer, tax, payments, privacy and platform rules before handling real users or value.
 
 See [Product brief](docs/PRODUCT_BRIEF.md) and [Engineering notes](docs/PROTOTYPE-REVIEW.md).
+
+## Collaboration & rights
+
+This public repository is available for evaluation; it is **not currently offered under an open-source license**. We are open to conversations with potential technical and commercial partners, but contributions and reuse require prior written agreement. See [Collaboration & intellectual property](COLLABORATION.md) and [Build with us](https://www.future-by-fie.com/#partners).
